@@ -1,0 +1,57 @@
+{
+  "title": "ui-demo-preview product story",
+  "source": "/Users/liushiyuwin/.pi/tmp/ui-demo-preview-media.1XZIw3",
+  "intent": "Show skill authors turning one rough UI-demo idea into an approved, recordable five-scene plan.",
+  "scenes": [
+    {
+      "id": "idea",
+      "button": "Describe idea",
+      "title": "Start with one rough idea",
+      "goal": "Make the requested workflow and audience concrete.",
+      "action": "Choose Inventory Ops and review the five planned beats.",
+      "subtitle": "Start with the story, not the recorder",
+      "duration_seconds": 4,
+      "svg": "scenes/01-idea.svg"
+    },
+    {
+      "id": "generate",
+      "button": "Build scenes",
+      "title": "Generate five SVG scenes",
+      "goal": "Create a cheap visual plan before screenshots or video.",
+      "action": "Click Build five scenes and watch the activity log complete.",
+      "subtitle": "Turn intent into five editable SVG mockups",
+      "duration_seconds": 5,
+      "svg": "scenes/02-generate.svg"
+    },
+    {
+      "id": "compare",
+      "button": "Compare",
+      "title": "Switch between scene states",
+      "goal": "Compare the story without scrubbing a rendered video.",
+      "action": "Select scene 3 and inspect its action, subtitle, and cursor target.",
+      "subtitle": "Click any scene to compare the flow",
+      "duration_seconds": 5,
+      "svg": "scenes/03-compare.svg"
+    },
+    {
+      "id": "revise",
+      "button": "Request change",
+      "title": "Mark one scene for revision",
+      "goal": "Capture actionable feedback while changes are still cheap.",
+      "action": "Choose Revise and enter a note about the cursor target.",
+      "subtitle": "Keep, revise, or cut each scene",
+      "duration_seconds": 6,
+      "svg": "scenes/04-revise.svg"
+    },
+    {
+      "id": "approve",
+      "button": "Approve",
+      "title": "Export an approved recording plan",
+      "goal": "End with visible proof that production can begin.",
+      "action": "Export feedback and reveal the Recording unlocked state.",
+      "subtitle": "Record only after the storyboard is approved",
+      "duration_seconds": 5,
+      "svg": "scenes/05-approve.svg"
+    }
+  ]
+}

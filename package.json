@@ -1,0 +1,8 @@
+{
+  "name": "ui-demo-preview-skill-site",
+  "private": true,
+  "version": "1.1.0",
+  "devDependencies": {
+    "playwright": "1.59.1"
+  }
+}

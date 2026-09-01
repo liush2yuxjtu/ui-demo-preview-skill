@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ui-demo-preview product story · storyboard preview</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2c;--line:#24354a;--text:#f8fafc;--muted:#91a1b6;--accent:#5ea3ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#173557 0,#07111f 42%);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:42px 0 28px}header{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:22px}h1,h2,p{margin:0}h1{font-size:clamp(28px,4vw,48px);letter-spacing:-.04em}header p{color:var(--muted);max-width:480px}.scene-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:24px 0}button{font:inherit;color:inherit}.scene-button{border:1px solid var(--line);background:#0b1828;padding:13px 14px;border-radius:12px;text-align:left;cursor:pointer}.scene-button span{display:block;color:#68809b;font:11px/1.2 ui-monospace,monospace;margin-bottom:5px}.scene-button.active{border-color:var(--accent);background:#132944;box-shadow:0 0 0 1px #5ea3ff55}.scene{border:1px solid var(--line);background:#091625;border-radius:20px;overflow:hidden;box-shadow:0 28px 80px #0007}.canvas{aspect-ratio:16/9;background:#020617;display:grid;place-items:center;border-bottom:1px solid var(--line)}.canvas svg{display:block;width:100%;height:100%}.scene-copy{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:26px 28px}.scene-copy h2{font-size:27px;margin:3px 0 5px}.scene-copy p,.scene-copy dd{color:var(--muted)}.eyebrow{font:12px/1.2 ui-monospace,monospace;color:var(--accent)!important}dl{display:grid;grid-template-columns:74px 1fr;gap:8px 12px;margin:0}dt{font-weight:700}dd{margin:0}.review{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:0 28px 28px}.choices{display:flex;gap:8px}.choices button,.export{border:1px solid var(--line);background:#101f32;border-radius:9px;padding:9px 13px;cursor:pointer}.choices button.selected{border-color:var(--accent);background:#173a62}textarea{width:100%;resize:vertical;border:1px solid var(--line);background:#07111f;color:var(--text);border-radius:10px;padding:10px 12px;font:inherit}footer{display:flex;justify-content:space-between;gap:18px;align-items:center;color:#6f8299;font:12px ui-monospace,monospace;margin-top:18px}.export{color:#dbeafe}[hidden]{display:none!important}@media(max-width:760px){header,.scene-copy,.review,footer{display:block}.scene-nav{grid-template-columns:1fr 1fr}.scene-button:last-child{grid-column:1/-1}.review>*{margin-top:12px}}
+</style></head><body><main>
+<header><div><p class="eyebrow">SVG FIRST · RECORD LATER</p><h1>ui-demo-preview product story</h1></div><p>Switch scenes, mark Keep, Revise, or Cut, then export notes. No video or generated images used.</p></header>
+<nav class="scene-nav" aria-label="Scenes"><button class="scene-button active" data-scene="idea"><span>01</span>Describe idea</button><button class="scene-button" data-scene="generate"><span>02</span>Build scenes</button><button class="scene-button" data-scene="compare"><span>03</span>Compare</button><button class="scene-button" data-scene="revise"><span>04</span>Request change</button><button class="scene-button" data-scene="approve"><span>05</span>Approve</button></nav>
+<section class="scene" data-panel="idea">
+  <div class="canvas"><ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<ns0:rect width="1280" height="720" fill="#07111f" />
+<ns0:circle cx="1100" cy="80" r="280" fill="#17375a" opacity=".72" />
+<ns0:circle cx="180" cy="680" r="330" fill="#102f35" opacity=".85" />
+<ns0:rect x="70" y="58" width="1140" height="604" rx="28" fill="#f7f6ef" stroke="#5d7189" stroke-width="2" />
+<ns0:rect x="70" y="58" width="1140" height="62" rx="28" fill="#111d2e" />
+<ns0:circle cx="106" cy="89" r="7" fill="#ff7d66" /><ns0:circle cx="130" cy="89" r="7" fill="#ffd166" /><ns0:circle cx="154" cy="89" r="7" fill="#77d9a8" />
+<ns0:text x="190" y="98" fill="#e6edf5" font-family="ui-monospace,monospace" font-size="15">ui-demo-preview · local review</ns0:text>
+<ns0:text x="1050" y="98" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="14">SCENE 01/05</ns0:text>
+<ns0:text x="122" y="188" fill="#17324d" font-family="Arial,sans-serif" font-size="17" font-weight="700">SVG FIRST · RECORD LATER</ns0:text>
+<ns0:text x="122" y="245" fill="#0c1825" font-family="Arial,sans-serif" font-size="42" font-weight="800">Describe the demo</ns0:text>
+<ns0:rect x="122" y="292" width="720" height="232" rx="20" fill="#fff" stroke="#d5d9d4" />
+<ns0:text x="158" y="345" fill="#51606f" font-family="Arial,sans-serif" font-size="14" font-weight="700">CURRENT STATE</ns0:text>
+<ns0:text x="158" y="397" fill="#102338" font-family="Arial,sans-serif" font-size="27" font-weight="750">Inventory Ops</ns0:text>
+<ns0:rect x="158" y="435" width="648" height="54" rx="11" fill="#edf2f2" />
+<ns0:text x="180" y="468" fill="#435466" font-family="ui-monospace,monospace" font-size="15">dashboard · alert · request · recovery · saved</ns0:text>
+<ns0:rect x="880" y="292" width="274" height="232" rx="20" fill="#11243a" />
+<ns0:text x="910" y="342" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="13">PROOF</ns0:text>
+<ns0:circle cx="1017" cy="408" r="46" fill="#bcff6b" />
+<ns0:path d="M994 409l15 15 31-36" fill="none" stroke="#17321f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<ns0:text x="1017" y="487" text-anchor="middle" fill="#f7fbff" font-family="Arial,sans-serif" font-size="17" font-weight="700">Idea captured</ns0:text>
+<ns0:g transform="translate(246 455)"><ns0:path d="M0 0v31l8-8 12 23 8-4-12-22 13-1z" fill="#07111f" stroke="#fff" stroke-width="2" /></ns0:g>
+<ns0:rect x="122" y="570" width="1032" height="46" rx="12" fill="#dfead5" />
+<ns0:text x="146" y="599" fill="#28422d" font-family="Arial,sans-serif" font-size="15">Static SVG storyboard · no screenshots · no generated imagery · safe to revise</ns0:text>
+</ns0:svg></div>
+  <div class="scene-copy">
+    <div><p class="eyebrow">SCENE 01 · 4s</p><h2>Start with one rough idea</h2><p>Make the requested workflow and audience concrete.</p></div>
+    <dl><dt>Action</dt><dd>Choose Inventory Ops and review the five planned beats.</dd><dt>Subtitle</dt><dd>Start with the story, not the recorder</dd></dl>
+  </div>
+  <div class="review" data-review="idea">
+    <div class="choices" role="group" aria-label="Scene decision">
+      <button data-choice="keep">Keep</button><button data-choice="revise">Revise</button><button data-choice="cut">Cut</button>
+    </div>
+    <textarea rows="3" placeholder="What should change in this scene?"></textarea>
+  </div>
+</section><section class="scene" data-panel="generate" hidden>
+  <div class="canvas"><ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<ns0:rect width="1280" height="720" fill="#07111f" />
+<ns0:circle cx="1100" cy="80" r="280" fill="#17375a" opacity=".72" />
+<ns0:circle cx="180" cy="680" r="330" fill="#102f35" opacity=".85" />
+<ns0:rect x="70" y="58" width="1140" height="604" rx="28" fill="#f7f6ef" stroke="#5d7189" stroke-width="2" />
+<ns0:rect x="70" y="58" width="1140" height="62" rx="28" fill="#111d2e" />
+<ns0:circle cx="106" cy="89" r="7" fill="#ff7d66" /><ns0:circle cx="130" cy="89" r="7" fill="#ffd166" /><ns0:circle cx="154" cy="89" r="7" fill="#77d9a8" />
+<ns0:text x="190" y="98" fill="#e6edf5" font-family="ui-monospace,monospace" font-size="15">ui-demo-preview · local review</ns0:text>
+<ns0:text x="1050" y="98" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="14">SCENE 02/05</ns0:text>
+<ns0:text x="122" y="188" fill="#17324d" font-family="Arial,sans-serif" font-size="17" font-weight="700">SVG FIRST · RECORD LATER</ns0:text>
+<ns0:text x="122" y="245" fill="#0c1825" font-family="Arial,sans-serif" font-size="42" font-weight="800">Build five scenes</ns0:text>
+<ns0:rect x="122" y="292" width="720" height="232" rx="20" fill="#fff" stroke="#d5d9d4" />
+<ns0:text x="158" y="345" fill="#51606f" font-family="Arial,sans-serif" font-size="14" font-weight="700">CURRENT STATE</ns0:text>
+<ns0:text x="158" y="397" fill="#102338" font-family="Arial,sans-serif" font-size="27" font-weight="750">Generating SVG storyboard</ns0:text>
+<ns0:rect x="158" y="435" width="648" height="54" rx="11" fill="#edf2f2" />
+<ns0:text x="180" y="468" fill="#435466" font-family="ui-monospace,monospace" font-size="15">scene 1 ✓  scene 2 ✓  scene 3 ✓  scene 4 ✓  scene 5 ✓</ns0:text>
+<ns0:rect x="880" y="292" width="274" height="232" rx="20" fill="#11243a" />
+<ns0:text x="910" y="342" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="13">PROOF</ns0:text>
+<ns0:circle cx="1017" cy="408" r="46" fill="#bcff6b" />
+<ns0:path d="M994 409l15 15 31-36" fill="none" stroke="#17321f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<ns0:text x="1017" y="487" text-anchor="middle" fill="#f7fbff" font-family="Arial,sans-serif" font-size="17" font-weight="700">5 scenes ready</ns0:text>
+<ns0:g transform="translate(522 455)"><ns0:path d="M0 0v31l8-8 12 23 8-4-12-22 13-1z" fill="#07111f" stroke="#fff" stroke-width="2" /></ns0:g>
+<ns0:rect x="122" y="570" width="1032" height="46" rx="12" fill="#dfead5" />
+<ns0:text x="146" y="599" fill="#28422d" font-family="Arial,sans-serif" font-size="15">Static SVG storyboard · no screenshots · no generated imagery · safe to revise</ns0:text>
+</ns0:svg></div>
+  <div class="scene-copy">
+    <div><p class="eyebrow">SCENE 02 · 5s</p><h2>Generate five SVG scenes</h2><p>Create a cheap visual plan before screenshots or video.</p></div>
+    <dl><dt>Action</dt><dd>Click Build five scenes and watch the activity log complete.</dd><dt>Subtitle</dt><dd>Turn intent into five editable SVG mockups</dd></dl>
+  </div>
+  <div class="review" data-review="generate">
+    <div class="choices" role="group" aria-label="Scene decision">
+      <button data-choice="keep">Keep</button><button data-choice="revise">Revise</button><button data-choice="cut">Cut</button>
+    </div>
+    <textarea rows="3" placeholder="What should change in this scene?"></textarea>
+  </div>
+</section><section class="scene" data-panel="compare" hidden>
+  <div class="canvas"><ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<ns0:rect width="1280" height="720" fill="#07111f" />
+<ns0:circle cx="1100" cy="80" r="280" fill="#17375a" opacity=".72" />
+<ns0:circle cx="180" cy="680" r="330" fill="#102f35" opacity=".85" />
+<ns0:rect x="70" y="58" width="1140" height="604" rx="28" fill="#f7f6ef" stroke="#5d7189" stroke-width="2" />
+<ns0:rect x="70" y="58" width="1140" height="62" rx="28" fill="#111d2e" />
+<ns0:circle cx="106" cy="89" r="7" fill="#ff7d66" /><ns0:circle cx="130" cy="89" r="7" fill="#ffd166" /><ns0:circle cx="154" cy="89" r="7" fill="#77d9a8" />
+<ns0:text x="190" y="98" fill="#e6edf5" font-family="ui-monospace,monospace" font-size="15">ui-demo-preview · local review</ns0:text>
+<ns0:text x="1050" y="98" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="14">SCENE 03/05</ns0:text>
+<ns0:text x="122" y="188" fill="#17324d" font-family="Arial,sans-serif" font-size="17" font-weight="700">SVG FIRST · RECORD LATER</ns0:text>
+<ns0:text x="122" y="245" fill="#0c1825" font-family="Arial,sans-serif" font-size="42" font-weight="800">Compare scene 3</ns0:text>
+<ns0:rect x="122" y="292" width="720" height="232" rx="20" fill="#fff" stroke="#d5d9d4" />
+<ns0:text x="158" y="345" fill="#51606f" font-family="Arial,sans-serif" font-size="14" font-weight="700">CURRENT STATE</ns0:text>
+<ns0:text x="158" y="397" fill="#102338" font-family="Arial,sans-serif" font-size="27" font-weight="750">Create replenishment request</ns0:text>
+<ns0:rect x="158" y="435" width="648" height="54" rx="11" fill="#edf2f2" />
+<ns0:text x="180" y="468" fill="#435466" font-family="ui-monospace,monospace" font-size="15">Action · Click Create request   Subtitle · Request 240 units</ns0:text>
+<ns0:rect x="880" y="292" width="274" height="232" rx="20" fill="#11243a" />
+<ns0:text x="910" y="342" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="13">PROOF</ns0:text>
+<ns0:circle cx="1017" cy="408" r="46" fill="#bcff6b" />
+<ns0:path d="M994 409l15 15 31-36" fill="none" stroke="#17321f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<ns0:text x="1017" y="487" text-anchor="middle" fill="#f7fbff" font-family="Arial,sans-serif" font-size="17" font-weight="700">Scene 3 of 5</ns0:text>
+<ns0:g transform="translate(714 455)"><ns0:path d="M0 0v31l8-8 12 23 8-4-12-22 13-1z" fill="#07111f" stroke="#fff" stroke-width="2" /></ns0:g>
+<ns0:rect x="122" y="570" width="1032" height="46" rx="12" fill="#dfead5" />
+<ns0:text x="146" y="599" fill="#28422d" font-family="Arial,sans-serif" font-size="15">Static SVG storyboard · no screenshots · no generated imagery · safe to revise</ns0:text>
+</ns0:svg></div>
+  <div class="scene-copy">
+    <div><p class="eyebrow">SCENE 03 · 5s</p><h2>Switch between scene states</h2><p>Compare the story without scrubbing a rendered video.</p></div>
+    <dl><dt>Action</dt><dd>Select scene 3 and inspect its action, subtitle, and cursor target.</dd><dt>Subtitle</dt><dd>Click any scene to compare the flow</dd></dl>
+  </div>
+  <div class="review" data-review="compare">
+    <div class="choices" role="group" aria-label="Scene decision">
+      <button data-choice="keep">Keep</button><button data-choice="revise">Revise</button><button data-choice="cut">Cut</button>
+    </div>
+    <textarea rows="3" placeholder="What should change in this scene?"></textarea>
+  </div>
+</section><section class="scene" data-panel="revise" hidden>
+  <div class="canvas"><ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<ns0:rect width="1280" height="720" fill="#07111f" />
+<ns0:circle cx="1100" cy="80" r="280" fill="#17375a" opacity=".72" />
+<ns0:circle cx="180" cy="680" r="330" fill="#102f35" opacity=".85" />
+<ns0:rect x="70" y="58" width="1140" height="604" rx="28" fill="#f7f6ef" stroke="#5d7189" stroke-width="2" />
+<ns0:rect x="70" y="58" width="1140" height="62" rx="28" fill="#111d2e" />
+<ns0:circle cx="106" cy="89" r="7" fill="#ff7d66" /><ns0:circle cx="130" cy="89" r="7" fill="#ffd166" /><ns0:circle cx="154" cy="89" r="7" fill="#77d9a8" />
+<ns0:text x="190" y="98" fill="#e6edf5" font-family="ui-monospace,monospace" font-size="15">ui-demo-preview · local review</ns0:text>
+<ns0:text x="1050" y="98" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="14">SCENE 04/05</ns0:text>
+<ns0:text x="122" y="188" fill="#17324d" font-family="Arial,sans-serif" font-size="17" font-weight="700">SVG FIRST · RECORD LATER</ns0:text>
+<ns0:text x="122" y="245" fill="#0c1825" font-family="Arial,sans-serif" font-size="42" font-weight="800">Request a revision</ns0:text>
+<ns0:rect x="122" y="292" width="720" height="232" rx="20" fill="#fff" stroke="#d5d9d4" />
+<ns0:text x="158" y="345" fill="#51606f" font-family="Arial,sans-serif" font-size="14" font-weight="700">CURRENT STATE</ns0:text>
+<ns0:text x="158" y="397" fill="#102338" font-family="Arial,sans-serif" font-size="27" font-weight="750">Decision: Revise</ns0:text>
+<ns0:rect x="158" y="435" width="648" height="54" rx="11" fill="#edf2f2" />
+<ns0:text x="180" y="468" fill="#435466" font-family="ui-monospace,monospace" font-size="15">Move the cursor target closer to Create request</ns0:text>
+<ns0:rect x="880" y="292" width="274" height="232" rx="20" fill="#11243a" />
+<ns0:text x="910" y="342" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="13">PROOF</ns0:text>
+<ns0:circle cx="1017" cy="408" r="46" fill="#bcff6b" />
+<ns0:path d="M994 409l15 15 31-36" fill="none" stroke="#17321f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<ns0:text x="1017" y="487" text-anchor="middle" fill="#f7fbff" font-family="Arial,sans-serif" font-size="17" font-weight="700">Feedback saved</ns0:text>
+<ns0:g transform="translate(812 455)"><ns0:path d="M0 0v31l8-8 12 23 8-4-12-22 13-1z" fill="#07111f" stroke="#fff" stroke-width="2" /></ns0:g>
+<ns0:rect x="122" y="570" width="1032" height="46" rx="12" fill="#dfead5" />
+<ns0:text x="146" y="599" fill="#28422d" font-family="Arial,sans-serif" font-size="15">Static SVG storyboard · no screenshots · no generated imagery · safe to revise</ns0:text>
+</ns0:svg></div>
+  <div class="scene-copy">
+    <div><p class="eyebrow">SCENE 04 · 6s</p><h2>Mark one scene for revision</h2><p>Capture actionable feedback while changes are still cheap.</p></div>
+    <dl><dt>Action</dt><dd>Choose Revise and enter a note about the cursor target.</dd><dt>Subtitle</dt><dd>Keep, revise, or cut each scene</dd></dl>
+  </div>
+  <div class="review" data-review="revise">
+    <div class="choices" role="group" aria-label="Scene decision">
+      <button data-choice="keep">Keep</button><button data-choice="revise">Revise</button><button data-choice="cut">Cut</button>
+    </div>
+    <textarea rows="3" placeholder="What should change in this scene?"></textarea>
+  </div>
+</section><section class="scene" data-panel="approve" hidden>
+  <div class="canvas"><ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<ns0:rect width="1280" height="720" fill="#07111f" />
+<ns0:circle cx="1100" cy="80" r="280" fill="#17375a" opacity=".72" />
+<ns0:circle cx="180" cy="680" r="330" fill="#102f35" opacity=".85" />
+<ns0:rect x="70" y="58" width="1140" height="604" rx="28" fill="#f7f6ef" stroke="#5d7189" stroke-width="2" />
+<ns0:rect x="70" y="58" width="1140" height="62" rx="28" fill="#111d2e" />
+<ns0:circle cx="106" cy="89" r="7" fill="#ff7d66" /><ns0:circle cx="130" cy="89" r="7" fill="#ffd166" /><ns0:circle cx="154" cy="89" r="7" fill="#77d9a8" />
+<ns0:text x="190" y="98" fill="#e6edf5" font-family="ui-monospace,monospace" font-size="15">ui-demo-preview · local review</ns0:text>
+<ns0:text x="1050" y="98" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="14">SCENE 05/05</ns0:text>
+<ns0:text x="122" y="188" fill="#17324d" font-family="Arial,sans-serif" font-size="17" font-weight="700">SVG FIRST · RECORD LATER</ns0:text>
+<ns0:text x="122" y="245" fill="#0c1825" font-family="Arial,sans-serif" font-size="42" font-weight="800">Approve the plan</ns0:text>
+<ns0:rect x="122" y="292" width="720" height="232" rx="20" fill="#fff" stroke="#d5d9d4" />
+<ns0:text x="158" y="345" fill="#51606f" font-family="Arial,sans-serif" font-size="14" font-weight="700">CURRENT STATE</ns0:text>
+<ns0:text x="158" y="397" fill="#102338" font-family="Arial,sans-serif" font-size="27" font-weight="750">Storyboard approved</ns0:text>
+<ns0:rect x="158" y="435" width="648" height="54" rx="11" fill="#edf2f2" />
+<ns0:text x="180" y="468" fill="#435466" font-family="ui-monospace,monospace" font-size="15">storyboard.svg · preview.html · feedback.json</ns0:text>
+<ns0:rect x="880" y="292" width="274" height="232" rx="20" fill="#11243a" />
+<ns0:text x="910" y="342" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="13">PROOF</ns0:text>
+<ns0:circle cx="1017" cy="408" r="46" fill="#bcff6b" />
+<ns0:path d="M994 409l15 15 31-36" fill="none" stroke="#17321f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<ns0:text x="1017" y="487" text-anchor="middle" fill="#f7fbff" font-family="Arial,sans-serif" font-size="17" font-weight="700">Recording unlocked</ns0:text>
+<ns0:g transform="translate(928 455)"><ns0:path d="M0 0v31l8-8 12 23 8-4-12-22 13-1z" fill="#07111f" stroke="#fff" stroke-width="2" /></ns0:g>
+<ns0:rect x="122" y="570" width="1032" height="46" rx="12" fill="#dfead5" />
+<ns0:text x="146" y="599" fill="#28422d" font-family="Arial,sans-serif" font-size="15">Static SVG storyboard · no screenshots · no generated imagery · safe to revise</ns0:text>
+</ns0:svg></div>
+  <div class="scene-copy">
+    <div><p class="eyebrow">SCENE 05 · 5s</p><h2>Export an approved recording plan</h2><p>End with visible proof that production can begin.</p></div>
+    <dl><dt>Action</dt><dd>Export feedback and reveal the Recording unlocked state.</dd><dt>Subtitle</dt><dd>Record only after the storyboard is approved</dd></dl>
+  </div>
+  <div class="review" data-review="approve">
+    <div class="choices" role="group" aria-label="Scene decision">
+      <button data-choice="keep">Keep</button><button data-choice="revise">Revise</button><button data-choice="cut">Cut</button>
+    </div>
+    <textarea rows="3" placeholder="What should change in this scene?"></textarea>
+  </div>
+</section>
+<footer><span>Source: /Users/liushiyuwin/.pi/tmp/ui-demo-preview-media.1XZIw3 · Pi session: 01a05b4a-11a8-7eae-9c84-babc603e6d79</span><button class="export" id="export">Export feedback JSON</button></footer>
+</main><script id="manifest" type="application/json">{"title": "ui-demo-preview product story", "source": "/Users/liushiyuwin/.pi/tmp/ui-demo-preview-media.1XZIw3", "session": "01a05b4a-11a8-7eae-9c84-babc603e6d79", "scenes": [{"id": "idea", "button": "Describe idea", "title": "Start with one rough idea", "goal": "Make the requested workflow and audience concrete.", "action": "Choose Inventory Ops and review the five planned beats.", "subtitle": "Start with the story, not the recorder", "duration_seconds": 4, "svg": "scenes/01-idea.svg"}, {"id": "generate", "button": "Build scenes", "title": "Generate five SVG scenes", "goal": "Create a cheap visual plan before screenshots or video.", "action": "Click Build five scenes and watch the activity log complete.", "subtitle": "Turn intent into five editable SVG mockups", "duration_seconds": 5, "svg": "scenes/02-generate.svg"}, {"id": "compare", "button": "Compare", "title": "Switch between scene states", "goal": "Compare the story without scrubbing a rendered video.", "action": "Select scene 3 and inspect its action, subtitle, and cursor target.", "subtitle": "Click any scene to compare the flow", "duration_seconds": 5, "svg": "scenes/03-compare.svg"}, {"id": "revise", "button": "Request change", "title": "Mark one scene for revision", "goal": "Capture actionable feedback while changes are still cheap.", "action": "Choose Revise and enter a note about the cursor target.", "subtitle": "Keep, revise, or cut each scene", "duration_seconds": 6, "svg": "scenes/04-revise.svg"}, {"id": "approve", "button": "Approve", "title": "Export an approved recording plan", "goal": "End with visible proof that production can begin.", "action": "Export feedback and reveal the Recording unlocked state.", "subtitle": "Record only after the storyboard is approved", "duration_seconds": 5, "svg": "scenes/05-approve.svg"}]}</script><script>
+const buttons=[...document.querySelectorAll('.scene-button')];
+const panels=[...document.querySelectorAll('.scene')];
+const key='ui-demo-preview:'+location.pathname;
+let state={};try{state=JSON.parse(localStorage.getItem(key)||'{}')}catch{state={}}
+function show(id){buttons.forEach(b=>b.classList.toggle('active',b.dataset.scene===id));panels.forEach(p=>p.hidden=p.dataset.panel!==id);location.hash=id}
+buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.scene)));
+document.querySelectorAll('.review').forEach(r=>{const id=r.dataset.review;const note=r.querySelector('textarea');const saved=state[id]||{};note.value=saved.note||'';r.querySelectorAll('[data-choice]').forEach(b=>{b.classList.toggle('selected',b.dataset.choice===saved.choice);b.addEventListener('click',()=>{state[id]={...(state[id]||{}),choice:b.dataset.choice,note:note.value};localStorage.setItem(key,JSON.stringify(state));r.querySelectorAll('[data-choice]').forEach(x=>x.classList.toggle('selected',x===b))})});note.addEventListener('input',()=>{state[id]={...(state[id]||{}),note:note.value};localStorage.setItem(key,JSON.stringify(state))})});
+document.addEventListener('keydown',e=>{if(e.target.matches('textarea'))return;const i=buttons.findIndex(b=>b.classList.contains('active'));if(e.key==='ArrowRight')show(buttons[(i+1)%buttons.length].dataset.scene);if(e.key==='ArrowLeft')show(buttons[(i-1+buttons.length)%buttons.length].dataset.scene)});
+document.getElementById('export').addEventListener('click',()=>{const manifest=JSON.parse(document.getElementById('manifest').textContent);const blob=new Blob([JSON.stringify({...manifest,feedback:state,exported_at:new Date().toISOString()},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ui-demo-preview-feedback.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
+const requested=location.hash.slice(1);if(buttons.some(b=>b.dataset.scene===requested))show(requested);
+</script></body></html>

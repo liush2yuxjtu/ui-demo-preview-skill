@@ -2,6 +2,14 @@
 
 Turn a rough software-demo idea into five clickable SVG scenes before paying the cost of screenshots, generated imagery, Playwright recording, or video rendering.
 
+[Open the pitch landing page](https://liush2yuxjtu.github.io/ui-demo-preview-skill/) · [Try the interactive product demo](https://liush2yuxjtu.github.io/ui-demo-preview-skill/product-demo/)
+
+<video controls muted playsinline poster="https://raw.githubusercontent.com/liush2yuxjtu/ui-demo-preview-skill/main/docs/assets/demo/poster.png" src="https://raw.githubusercontent.com/liush2yuxjtu/ui-demo-preview-skill/main/docs/assets/demo/ui-demo-preview.mp4">
+  <a href="https://liush2yuxjtu.github.io/ui-demo-preview-skill/assets/demo/ui-demo-preview.mp4">Watch the 25-second UI demo</a>
+</video>
+
+[Watch or download the MP4 demo](https://liush2yuxjtu.github.io/ui-demo-preview-skill/assets/demo/ui-demo-preview.mp4)
+
 `ui-demo-preview` creates a fast review layer between an idea and production:
 
 - five editable, local SVG UI mockups;
