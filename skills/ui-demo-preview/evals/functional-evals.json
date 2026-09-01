@@ -1,0 +1,47 @@
+{
+  "skill_name": "ui-demo-preview",
+  "evals": [
+    {
+      "id": 1,
+      "name": "idea-to-five-scene-preview",
+      "prompt": "I have only a rough idea for an inventory operations demo. A warehouse manager opens a stock dashboard, spots a low-stock alert, creates a replenishment request, sees the projected stock recover, then saves the plan. Turn this into something I can click through and annotate before anyone records video. Keep the first iteration fast and practical.",
+      "expected_output": "Five local SVG scene mockups, one static storyboard.svg, and one offline preview.html with clickable scene switching and review feedback; no image or video generation.",
+      "files": [],
+      "expectations": [
+        "Output contains scenes.json, preview.html, storyboard.svg, and exactly five local scene SVG files",
+        "The bundled validate_preview.py accepts all generated artifacts",
+        "preview.html switches among exactly five scenes and provides Keep, Revise, Cut, notes, local autosave, and feedback JSON export",
+        "Scene content follows the requested inventory story in the requested order",
+        "No raster image, video, generated-image artifact, remote dependency, or network reference appears in outputs"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "existing-ui-label-grounding",
+      "prompt": "Use the supplied app-shell.html as the source for a pre-recording walkthrough. The story should cover Overview, Review queue, approving PR-1042, the Approved confirmation, and Audit log. Preserve the exact visible product labels where possible. I need five buttons to compare scenes and leave revision notes before Playwright recording.",
+      "expected_output": "A five-scene SVG-first preview grounded in exact labels from the supplied app shell, with static and interactive review artifacts.",
+      "files": ["evals/files/app-shell.html"],
+      "expectations": [
+        "Output contains scenes.json, preview.html, storyboard.svg, and exactly five local scene SVG files",
+        "The bundled validate_preview.py accepts all generated artifacts",
+        "The five scenes preserve Overview, Review queue, PR-1042, Approved, and Audit log in story order",
+        "preview.html provides five scene buttons plus per-scene decision, note autosave, and feedback export controls",
+        "No recording, raster generation, remote dependency, or external network reference appears in outputs"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "expensive-work-gate",
+      "prompt": "Make a polished onboarding demo for a research workspace. The flow is: choose a dataset, inspect schema, run analysis, review the chart, save a report. Go ahead and generate hero images and record the video too if that helps. I still want to preview and improve every scene before committing to the final result.",
+      "expected_output": "The workflow produces the five-scene SVG storyboard and clickable review preview first, while deferring image generation and recording until explicit storyboard approval.",
+      "files": [],
+      "expectations": [
+        "Output contains scenes.json, preview.html, storyboard.svg, and exactly five local scene SVG files",
+        "The bundled validate_preview.py accepts all generated artifacts",
+        "The scene arc follows dataset, schema, analysis, chart, report in order",
+        "No image generation, browser recording, video render, or video artifact occurs before storyboard approval",
+        "The output or transcript clearly states that image generation and recording are deferred until storyboard approval"
+      ]
+    }
+  ]
+}
