@@ -1,0 +1,82 @@
+[
+  {
+    "query": "我们要录一段 45 秒的仓库看板 Playwright 演示，但产品经理一直在改故事顺序。录制前先做 5 个可点击场景：库存看板、低库存预警、创建补货、库存恢复预测、保存计划，让她可以逐场批注。",
+    "should_trigger": true
+  },
+  {
+    "query": "请先把这个粗略的新手引导想法做成快速 SVG 故事板。我想用 5 个按钮切换登录、导入、字段映射、成功结果和历史记录，确认后再录 UI 演示。",
+    "should_trigger": true
+  },
+  {
+    "query": "报销审批流程截图放在 ~/Downloads/expense-flow/。请做一个离线场景预览页，评审人能对每场标记保留、修改或删除并填写备注。在生成主视觉或录屏前先完成这一步。",
+    "should_trigger": true
+  },
+  {
+    "query": "给 http://localhost:4173 规划一段教程视频。Playwright 录制真实应用前，我需要通过可点击原型确认 5 个章节状态和鼠标目标。",
+    "should_trigger": true
+  },
+  {
+    "query": "创始人口头描述了一个产品演示：选择数据集、检查字段结构、运行分析、查看图表、保存报告。先把想法变成可快速修改的实用场景，不要现在生成图片。",
+    "should_trigger": true
+  },
+  {
+    "query": "现有 UI 演示脚本的叙事很乱。先用静态 SVG 页面和场景切换按钮做一版新的 5 场流程，之后再按批准的顺序录制。",
+    "should_trigger": true
+  },
+  {
+    "query": "录制管理后台操作演示前，先帮我做故事板。场景依次是 Overview、Review queue、Approve PR-1042、Approved、Audit log。保留界面原文，并给每场加修改意见框。",
+    "should_trigger": true
+  },
+  {
+    "query": "以后要做新手引导录屏，但现在只有用户目标。先做成本最低的可点击场景方案，让我验证画面构图、字幕、鼠标落点和节奏。",
+    "should_trigger": true
+  },
+  {
+    "query": "制作 SaaS 发布演示前，先给我 5 张 SVG 界面草图、一个静态总故事板和一个按钮切换预览。评审后再决定哪些场景需要生成式图片。",
+    "should_trigger": true
+  },
+  {
+    "query": "把这个产品想法迭代成可录制的 UI 故事。任何人开始录屏或渲染前，都要先完成逐场审批并导出反馈。",
+    "should_trigger": true
+  },
+  {
+    "query": "故事板和 demo.cjs 里的选择器已经审批通过。现在直接用 Playwright 录制，加入可见鼠标、字幕和自然停顿。",
+    "should_trigger": false
+  },
+  {
+    "query": "给官网做一个长期运行的 React 交互式产品 Demo，包含可拖动终端窗口、模型选择器、模拟遥测和可缩放面板。它用于替代视频，访客需要一直能操作。",
+    "should_trigger": true
+  },
+  {
+    "query": "为卫星发射主题的动画品牌短片画 6 格 SVG 故事板。它不包含软件界面、浏览器流程、录屏或 UI 教程。",
+    "should_trigger": false
+  },
+  {
+    "query": "final-demo.mp4 已经完成。请在 0、4、8、12、17 秒添加 5 个章节按钮，用来跳转现有视频，然后发布 HTML 页面。",
+    "should_trigger": false
+  },
+  {
+    "query": "为账单设置页面制作一张精致的 1280×720 SVG 设计稿，用于单页设计评审。不需要多场景、操作演示、录制或视频规划。",
+    "should_trigger": false
+  },
+  {
+    "query": "用 Playwright 测试 localhost:3000 的登录、表单校验、API 错误和移动端布局。只在测试失败时截图，不制作演示录屏。",
+    "should_trigger": false
+  },
+  {
+    "query": "根据已经批准的镜头表，为奇幻游戏预告片生成 5 张电影感概念图。没有应用界面或屏幕录制流程。",
+    "should_trigger": false
+  },
+  {
+    "query": "现有教程视频第三场太快。剪辑 WebM，把停顿延长 2 秒，统一音量，并在 macmini 上重新编码最终 MP4。",
+    "should_trigger": false
+  },
+  {
+    "query": "制作一个 Figma 级移动端结账原型，屏幕之间用导航箭头连接，交付给开发。成品就是产品设计，不用于准备演示视频。",
+    "should_trigger": false
+  },
+  {
+    "query": "用 3 个 Playwright 提示词评测现有 ui-demo 录制 Skill，对比选择器可靠性、运行时间和 token 成本。不要为这些应用生成故事板。",
+    "should_trigger": false
+  }
+]

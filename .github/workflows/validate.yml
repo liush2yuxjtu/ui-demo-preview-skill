@@ -1,0 +1,28 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  skill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile scripts
+        run: python3 -m py_compile skills/ui-demo-preview/scripts/build_preview.py skills/ui-demo-preview/scripts/validate_preview.py
+      - name: Run smoke test
+        run: python3 tests/smoke.py
+      - name: Validate Agent Skill
+        run: gh skill publish --dry-run .
+        env:
+          GH_TOKEN: ${{ github.token }}
