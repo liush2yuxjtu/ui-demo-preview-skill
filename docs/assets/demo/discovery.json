@@ -1,0 +1,152 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "document": {
+    "width": 1280,
+    "height": 766
+  },
+  "controls": [
+    {
+      "tag": "BUTTON",
+      "label": "Run the demo",
+      "rect": {
+        "x": 989,
+        "y": 121,
+        "width": 140,
+        "height": 42
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Reset layout",
+      "rect": {
+        "x": 1139,
+        "y": 121,
+        "width": 129,
+        "height": 42
+      }
+    },
+    {
+      "tag": "SELECT",
+      "label": "Inventory operationsResearch workspaceApproval workflow",
+      "rect": {
+        "x": 70,
+        "y": 279,
+        "width": 593,
+        "height": 42
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Build five scenes",
+      "rect": {
+        "x": 673,
+        "y": 261,
+        "width": 161,
+        "height": 60
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "01Describe idea",
+      "rect": {
+        "x": 70,
+        "y": 335,
+        "width": 147,
+        "height": 50
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "02Build scenes",
+      "rect": {
+        "x": 224,
+        "y": 335,
+        "width": 147,
+        "height": 50
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "03Compare",
+      "rect": {
+        "x": 378,
+        "y": 335,
+        "width": 147,
+        "height": 50
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "04Request change",
+      "rect": {
+        "x": 533,
+        "y": 335,
+        "width": 147,
+        "height": 50
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "05Approve",
+      "rect": {
+        "x": 687,
+        "y": 335,
+        "width": 147,
+        "height": 50
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Keep",
+      "rect": {
+        "x": 860,
+        "y": 442,
+        "width": 112,
+        "height": 33
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Revise",
+      "rect": {
+        "x": 979,
+        "y": 442,
+        "width": 112,
+        "height": 33
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Cut",
+      "rect": {
+        "x": 1098,
+        "y": 442,
+        "width": 112,
+        "height": 33
+      }
+    },
+    {
+      "tag": "TEXTAREA",
+      "label": "What should change in this scene?",
+      "rect": {
+        "x": 860,
+        "y": 503,
+        "width": 351,
+        "height": 76
+      }
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Export feedback",
+      "rect": {
+        "x": 860,
+        "y": 616,
+        "width": 351,
+        "height": 38
+      }
+    }
+  ]
+}

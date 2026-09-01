@@ -13,6 +13,8 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+ET.register_namespace("", "http://www.w3.org/2000/svg")
+
 BANNED_TAGS = {"script", "foreignObject", "iframe", "object", "embed", "audio", "video"}
 URL_ATTRS = {"href", "{http://www.w3.org/1999/xlink}href", "src"}
 MAX_SVG_BYTES = 2_000_000

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#07111f"/>
+<circle cx="1100" cy="80" r="280" fill="#17375a" opacity=".72"/>
+<circle cx="180" cy="680" r="330" fill="#102f35" opacity=".85"/>
+<rect x="70" y="58" width="1140" height="604" rx="28" fill="#f7f6ef" stroke="#5d7189" stroke-width="2"/>
+<rect x="70" y="58" width="1140" height="62" rx="28" fill="#111d2e"/>
+<circle cx="106" cy="89" r="7" fill="#ff7d66"/><circle cx="130" cy="89" r="7" fill="#ffd166"/><circle cx="154" cy="89" r="7" fill="#77d9a8"/>
+<text x="190" y="98" fill="#e6edf5" font-family="ui-monospace,monospace" font-size="15">ui-demo-preview · local review</text>
+<text x="1050" y="98" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="14">SCENE 02/05</text>
+<text x="122" y="188" fill="#17324d" font-family="Arial,sans-serif" font-size="17" font-weight="700">SVG FIRST · RECORD LATER</text>
+<text x="122" y="245" fill="#0c1825" font-family="Arial,sans-serif" font-size="42" font-weight="800">Build five scenes</text>
+<rect x="122" y="292" width="720" height="232" rx="20" fill="#fff" stroke="#d5d9d4"/>
+<text x="158" y="345" fill="#51606f" font-family="Arial,sans-serif" font-size="14" font-weight="700">CURRENT STATE</text>
+<text x="158" y="397" fill="#102338" font-family="Arial,sans-serif" font-size="27" font-weight="750">Generating SVG storyboard</text>
+<rect x="158" y="435" width="648" height="54" rx="11" fill="#edf2f2"/>
+<text x="180" y="468" fill="#435466" font-family="ui-monospace,monospace" font-size="15">scene 1 ✓  scene 2 ✓  scene 3 ✓  scene 4 ✓  scene 5 ✓</text>
+<rect x="880" y="292" width="274" height="232" rx="20" fill="#11243a"/>
+<text x="910" y="342" fill="#8ba1b8" font-family="ui-monospace,monospace" font-size="13">PROOF</text>
+<circle cx="1017" cy="408" r="46" fill="#bcff6b"/>
+<path d="M994 409l15 15 31-36" fill="none" stroke="#17321f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1017" y="487" text-anchor="middle" fill="#f7fbff" font-family="Arial,sans-serif" font-size="17" font-weight="700">5 scenes ready</text>
+<g transform="translate(522 455)"><path d="M0 0v31l8-8 12 23 8-4-12-22 13-1z" fill="#07111f" stroke="#fff" stroke-width="2"/></g>
+<rect x="122" y="570" width="1032" height="46" rx="12" fill="#dfead5"/>
+<text x="146" y="599" fill="#28422d" font-family="Arial,sans-serif" font-size="15">Static SVG storyboard · no screenshots · no generated imagery · safe to revise</text>
+</svg>
