@@ -28,6 +28,7 @@ def main() -> int:
     required = [
         "ui-demo-preview.mp4",
         "ui-demo-preview.webm",
+        "ui-demo-preview.gif",
         "poster.png",
         "contact-sheet.png",
         "interaction-strip.png",
@@ -51,7 +52,7 @@ def main() -> int:
     assert duration > 20
     assert all(0 <= timestamp < duration for timestamp in markers.values())
 
-    assert "<video" in readme and "ui-demo-preview.mp4" in readme
+    assert "ui-demo-preview.gif" in readme and "ui-demo-preview.mp4" in readme
     assert "ui-demo-preview-skill/product-demo/" in readme
     print("PASS: landing, product demo, video assets, chapters, README embed")
     return 0

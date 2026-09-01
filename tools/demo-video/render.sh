@@ -31,6 +31,9 @@ ffmpeg -y -hide_banner -loglevel error \
   -an -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart \
   "$OUT/ui-demo-preview.mp4"
 
+ffmpeg -y -hide_banner -loglevel error -i "$OUT/ui-demo-preview.mp4" \
+  -filter_complex "fps=8,scale=720:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=128[p];[b][p]paletteuse=dither=bayer:bayer_scale=5" \
+  "$OUT/ui-demo-preview.gif"
 ffprobe -v error -show_format -show_streams -of json "$OUT/ui-demo-preview.mp4" > "$OUT/probe.json"
 ffmpeg -y -hide_banner -loglevel error -ss 2 -i "$OUT/ui-demo-preview.mp4" -frames:v 1 "$OUT/poster.png"
 ffmpeg -y -hide_banner -loglevel error -i "$OUT/ui-demo-preview.mp4" \
