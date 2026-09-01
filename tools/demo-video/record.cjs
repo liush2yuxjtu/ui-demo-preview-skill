@@ -77,6 +77,7 @@ async function runFlow(page, markers) {
 
   const story = page.locator('#story-select');
   const build = page.locator('#build-scenes');
+  const scene2 = page.locator('[data-scene="1"]');
   const scene3 = page.locator('[data-scene="2"]');
   const scene4 = page.locator('[data-scene="3"]');
   const scene5 = page.locator('[data-scene="4"]');
@@ -97,9 +98,13 @@ async function runFlow(page, markers) {
   await page.waitForTimeout(1600);
   await mark('build', { state: 'five scenes ready' });
 
-  await subtitle(page, 'Compare the flow without rendering a video');
-  await moveAndClick(page, scene3, 'Scene 3 tab', 1400);
-  await mark('compare', { scene: 3 });
+  await subtitle(page, 'Compare and review every scene');
+  await moveAndClick(page, keep, 'Keep scene 1', 350);
+  await moveAndClick(page, scene2, 'Scene 2 tab', 300);
+  await moveAndClick(page, keep, 'Keep scene 2', 350);
+  await moveAndClick(page, scene3, 'Scene 3 tab', 700);
+  await moveAndClick(page, keep, 'Keep scene 3', 700);
+  await mark('compare', { scene: 3, reviewed: 3 });
 
   await subtitle(page, 'Leave one actionable revision');
   await moveAndClick(page, scene4, 'Scene 4 tab', 700);

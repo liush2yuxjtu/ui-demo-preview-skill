@@ -47,7 +47,9 @@ def main() -> int:
     video = next(stream for stream in probe["streams"] if stream["codec_type"] == "video")
     assert video["codec_name"] == "h264" and video["pix_fmt"] == "yuv420p"
     assert (int(video["width"]), int(video["height"])) == (1280, 720)
-    assert float(probe["format"]["duration"]) > 20
+    duration = float(probe["format"]["duration"])
+    assert duration > 20
+    assert all(0 <= timestamp < duration for timestamp in markers.values())
 
     assert "<video" in readme and "ui-demo-preview.mp4" in readme
     assert "ui-demo-preview-skill/product-demo/" in readme

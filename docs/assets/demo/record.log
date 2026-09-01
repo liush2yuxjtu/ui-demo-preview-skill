@@ -5,17 +5,21 @@ REHEARSAL OK: Scene 3 tab {"x":378.21875,"y":335.34375,"width":147.3125,"height"
 REHEARSAL OK: Revise decision {"x":978.890625,"y":441.875,"width":112.25,"height":33}
 REHEARSAL OK: Revision note {"x":859.65625,"y":502.875,"width":350.734375,"height":76}
 REHEARSAL OK: Export feedback {"x":859.65625,"y":615.875,"width":350.734375,"height":38}
-{"marker":"ui-demo","label":"orient","elapsedMs":2386,"scrollY":0,"viewport":{"width":1280,"height":720},"state":"rough idea visible"}
+{"marker":"ui-demo","label":"orient","elapsedMs":2381,"scrollY":0,"viewport":{"width":1280,"height":720},"state":"rough idea visible"}
 REHEARSAL OK: Build five scenes {"x":673.078125,"y":261.34375,"width":161.078125,"height":60}
-{"marker":"ui-demo","label":"build","elapsedMs":6312,"scrollY":0,"viewport":{"width":1280,"height":720},"state":"five scenes ready"}
+{"marker":"ui-demo","label":"build","elapsedMs":6330,"scrollY":0,"viewport":{"width":1280,"height":720},"state":"five scenes ready"}
+REHEARSAL OK: Keep scene 1 {"x":859.65625,"y":441.875,"width":112.234375,"height":33}
+REHEARSAL OK: Scene 2 tab {"x":223.90625,"y":335.34375,"width":147.3125,"height":50}
+REHEARSAL OK: Keep scene 2 {"x":859.65625,"y":441.875,"width":112.234375,"height":33}
 REHEARSAL OK: Scene 3 tab {"x":378.21875,"y":335.34375,"width":147.3125,"height":50}
-{"marker":"ui-demo","label":"compare","elapsedMs":8940,"scrollY":0,"viewport":{"width":1280,"height":720},"scene":3}
+REHEARSAL OK: Keep scene 3 {"x":859.65625,"y":441.875,"width":112.234375,"height":33}
+{"marker":"ui-demo","label":"compare","elapsedMs":12222,"scrollY":0,"viewport":{"width":1280,"height":720},"scene":3,"reviewed":3}
 REHEARSAL OK: Scene 4 tab {"x":532.53125,"y":335.34375,"width":147.3125,"height":50}
 REHEARSAL OK: Revise decision {"x":978.890625,"y":441.875,"width":112.25,"height":33}
 REHEARSAL OK: Revision note {"x":859.65625,"y":502.875,"width":350.734375,"height":76}
-{"marker":"ui-demo","label":"revise","elapsedMs":16091,"scrollY":0,"viewport":{"width":1280,"height":720},"decision":"revise","note":"saved"}
+{"marker":"ui-demo","label":"revise","elapsedMs":19397,"scrollY":0,"viewport":{"width":1280,"height":720},"decision":"revise","note":"saved"}
 REHEARSAL OK: Scene 5 tab {"x":686.84375,"y":335.34375,"width":147.296875,"height":50}
 REHEARSAL OK: Keep final scene {"x":859.65625,"y":467.875,"width":112.234375,"height":33}
 REHEARSAL OK: Export feedback {"x":859.65625,"y":641.875,"width":350.734375,"height":38}
-{"marker":"ui-demo","label":"approve","elapsedMs":23264,"scrollY":0,"viewport":{"width":1280,"height":720},"state":"recording unlocked"}
-VIDEO SAVED: /Users/liushiyu/.cache/pi-video-render/1abf196126d39e6c/docs/assets/demo/ui-demo-preview.webm
+{"marker":"ui-demo","label":"approve","elapsedMs":26566,"scrollY":0,"viewport":{"width":1280,"height":720},"state":"recording unlocked"}
+VIDEO SAVED: <remote-project>/docs/assets/demo/ui-demo-preview.webm

@@ -62,6 +62,7 @@ def main() -> int:
         )
         preview = (work / "preview.html").read_text(encoding="utf-8")
         assert preview.count('class="scene-button') == 5
+        assert "<svg" in preview and "<ns0:" not in preview
         for marker in ("Keep", "Revise", "Cut", "localStorage", "Export feedback JSON"):
             assert marker in preview, marker
 
