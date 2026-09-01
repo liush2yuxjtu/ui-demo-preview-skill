@@ -15,6 +15,7 @@ from pathlib import Path
 
 BANNED_TAGS = {"script", "foreignObject", "iframe", "object", "embed", "audio", "video"}
 URL_ATTRS = {"href", "{http://www.w3.org/1999/xlink}href", "src"}
+MAX_SVG_BYTES = 2_000_000
 
 
 def fail(message: str) -> None:
@@ -24,7 +25,12 @@ def fail(message: str) -> None:
 def clean_svg(path: Path) -> str:
     if not path.is_file():
         fail(f"Missing SVG: {path}")
+    if path.stat().st_size > MAX_SVG_BYTES:
+        fail(f"SVG exceeds {MAX_SVG_BYTES} bytes: {path}")
     raw = path.read_text(encoding="utf-8")
+    raw_lower = raw.lower()
+    if "<!doctype" in raw_lower or "<!entity" in raw_lower:
+        fail(f"DTD and entity declarations are not allowed: {path}")
     try:
         root = ET.fromstring(raw)
     except ET.ParseError as exc:
@@ -35,6 +41,13 @@ def clean_svg(path: Path) -> str:
         tag = node.tag.split("}")[-1]
         if tag in BANNED_TAGS:
             fail(f"Active SVG tag <{tag}> is not allowed: {path}")
+        if tag == "style":
+            css = "".join(node.itertext()).strip().lower()
+            if "@import" in css:
+                fail(f"CSS imports are not allowed: {path}")
+            refs = re.findall(r"url\(([^)]+)\)", css)
+            if any(not ref.strip(" '\"").startswith("#") for ref in refs):
+                fail(f"External CSS reference is not allowed: {path}")
         for key, value in node.attrib.items():
             local_key = key.split("}")[-1].lower()
             value_lower = value.strip().lower()
@@ -62,6 +75,8 @@ def text(value: object, fallback: str = "") -> str:
 
 def load_manifest(path: Path) -> tuple[dict, list[dict]]:
     data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        fail("scenes.json root must be an object")
     scenes = data.get("scenes")
     if not isinstance(scenes, list) or not scenes:
         fail("scenes.json must contain a non-empty scenes array")

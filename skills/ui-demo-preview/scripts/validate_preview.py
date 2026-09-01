@@ -9,6 +9,8 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+MAX_SVG_BYTES = 2_000_000
+
 
 def check(condition: bool, message: str, errors: list[str]) -> None:
     if not condition:
@@ -26,8 +28,14 @@ def main() -> int:
     except Exception as exc:
         print(f"ERROR: invalid manifest: {exc}", file=sys.stderr)
         return 1
+    if not isinstance(data, dict):
+        print("ERROR: manifest root must be an object", file=sys.stderr)
+        return 1
     scenes = data.get("scenes", [])
-    check(isinstance(scenes, list) and len(scenes) == 5, "First-pass storyboard must contain exactly 5 scenes", errors)
+    if not isinstance(scenes, list):
+        errors.append("Manifest scenes must be an array")
+        scenes = []
+    check(len(scenes) == 5, "First-pass storyboard must contain exactly 5 scenes", errors)
     ids = [str(scene.get("id", "")) for scene in scenes if isinstance(scene, dict)]
     check(len(ids) == len(set(ids)), "Scene ids must be unique", errors)
     for index, scene in enumerate(scenes, 1):
@@ -41,12 +49,22 @@ def main() -> int:
         svg_path = (manifest_path.parent / str(scene.get("svg", ""))).resolve()
         check(svg_path.is_file(), f"Scene {index} SVG missing: {svg_path}", errors)
         if svg_path.is_file():
+            check(svg_path.stat().st_size <= MAX_SVG_BYTES, f"Scene {index} SVG exceeds {MAX_SVG_BYTES} bytes", errors)
             raw = svg_path.read_text(encoding="utf-8")
-            check("<script" not in raw.lower(), f"Scene {index} SVG contains script", errors)
-            check("foreignobject" not in raw.lower(), f"Scene {index} SVG contains foreignObject", errors)
+            raw_lower = raw.lower()
+            check("<!doctype" not in raw_lower and "<!entity" not in raw_lower, f"Scene {index} SVG contains DTD or entity declaration", errors)
+            check("<script" not in raw_lower, f"Scene {index} SVG contains script", errors)
+            check("foreignobject" not in raw_lower, f"Scene {index} SVG contains foreignObject", errors)
             check(not re.search(r"\son[a-z]+\s*=", raw, re.I), f"Scene {index} SVG contains event handler", errors)
             try:
-                ET.fromstring(raw)
+                root = ET.fromstring(raw)
+                for node in root.iter():
+                    if node.tag.split("}")[-1] != "style":
+                        continue
+                    css = "".join(node.itertext()).strip().lower()
+                    check("@import" not in css, f"Scene {index} SVG contains CSS import", errors)
+                    refs = re.findall(r"url\(([^)]+)\)", css)
+                    check(all(ref.strip(" '\"").startswith("#") for ref in refs), f"Scene {index} SVG contains external CSS reference", errors)
             except ET.ParseError as exc:
                 errors.append(f"Scene {index} SVG invalid: {exc}")
     check(html_path.is_file() and html_path.stat().st_size > 1000, "preview.html missing or empty", errors)

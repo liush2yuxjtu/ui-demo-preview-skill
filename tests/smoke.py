@@ -64,6 +64,37 @@ def main() -> int:
         assert preview.count('class="scene-button') == 5
         for marker in ("Keep", "Revise", "Cut", "localStorage", "Export feedback JSON"):
             assert marker in preview, marker
+
+        first_svg = work / scenes[0]["svg"]
+        first_svg.write_text(
+            '<!DOCTYPE svg [<!ENTITY x "boom">]><svg xmlns="http://www.w3.org/2000/svg"><text>&x;</text></svg>',
+            encoding="utf-8",
+        )
+        blocked_dtd = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/build_preview.py"), str(manifest), "--output-dir", str(work)],
+            capture_output=True,
+            text=True,
+        )
+        assert blocked_dtd.returncode == 1 and "DTD and entity" in blocked_dtd.stderr
+
+        first_svg.write_text(
+            '<svg xmlns="http://www.w3.org/2000/svg"><style>@import "https://example.invalid/x.css";</style></svg>',
+            encoding="utf-8",
+        )
+        blocked_css = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/build_preview.py"), str(manifest), "--output-dir", str(work)],
+            capture_output=True,
+            text=True,
+        )
+        assert blocked_css.returncode == 1 and "CSS imports" in blocked_css.stderr
+
+        manifest.write_text("[]", encoding="utf-8")
+        invalid_manifest = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/build_preview.py"), str(manifest), "--output-dir", str(work)],
+            capture_output=True,
+            text=True,
+        )
+        assert invalid_manifest.returncode == 1 and "root must be an object" in invalid_manifest.stderr
     print("PASS: ui-demo-preview smoke test")
     return 0
 
